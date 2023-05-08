@@ -62,6 +62,7 @@ router.post('/', async (req, res) => {
       res.status(200).json({ message: "Product added successfully" });
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
+    console.log("Product was created successfully!")
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
@@ -108,6 +109,7 @@ router.put('/:id', (req, res) => {
       ]);
     })
     .then((updatedProductTags) => res.status(200).json(updatedProductTags))
+    console.log("Updated product successfully")
     .catch((err) => {
       // console.log(err);
       res.status(400).json(err);
