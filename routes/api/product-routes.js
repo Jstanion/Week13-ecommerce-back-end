@@ -59,7 +59,7 @@ router.post('/', async (req, res) => {
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
-      res.status(200).json(product);
+      res.status(200).json({ message: "Product added successfully" });
     })
     .then((productTagIds) => res.status(200).json(productTagIds))
     .catch((err) => {
@@ -107,7 +107,7 @@ router.put('/:id', (req, res) => {
         ProductTag.bulkCreate(newProductTags),
       ]);
     })
-    .then((updatedProductTags) => res.json(updatedProductTags))
+    .then((updatedProductTags) => res.status(200).json(updatedProductTags))
     .catch((err) => {
       // console.log(err);
       res.status(400).json(err);
