@@ -3,10 +3,9 @@ const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
 
+// route to find all categories and include its associated Products
 router.get('/', async (req, res) => {
   try {
-
-    // find all categories and include its associated Products
     const categoryData = await Category.findAll({
       include: [{model: Product}]
     });
@@ -17,15 +16,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+// route to find one category by its `id` value and include its associated Products
 router.get('/:id', async (req, res) => {
   try {
-    // find one category by its `id` value 
     const categoryData = await Category.findByPk(req.params.id, {
-
-      // be sure to include its associated Products
       include: [{model: Product}]
     });
 
+    // conditional to check for an invalid id entry
     if (!categoryData) {
       res.status(404).json({message: 'No category found with this id!'});
       return;
@@ -37,10 +35,9 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// route to create a new category
 router.post('/', async (req, res) => {
   try {
-    
-    // create a new category
     const categoryData = await Category.create(req.body);
     res.status(200).json({message: "Category added successfully!"});
 
@@ -49,15 +46,17 @@ router.post('/', async (req, res) => {
   }
 });
 
+
+// route to update a category by its `id` value
 router.put('/:id', async (req, res) => {
   try {
-    // update a category by its `id` value
     const categoryData = await Category.update(req.body, {
       where: {
         id: req.params.id,
       },
     });
 
+    // conditional to check for an invalid id entry
     if (!categoryData) {
       res.status(404).json({message: 'No product found with this id!'})
       return;
@@ -69,16 +68,16 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// route to delete a category by its `id` value
 router.delete('/:id', async (req, res) => {
   try {
-    
-    // delete a category by its `id` value
     const categoryData = await Category.destroy({
       where: {
         id: req.params.id
       }
     });
 
+    // conditional to check for an invalid id entry
     if (!categoryData) {
       res.status(404).json({message: 'No product found with this id!'})
       return;
