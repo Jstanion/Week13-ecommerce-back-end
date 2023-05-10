@@ -18,8 +18,6 @@ I built this application to familiarize myself with teh relationships between da
 
 - [Contributing](#contributing)
 
-- [Tests](#tests)
-
 - [Questions](#questions)
 
 ## Installation
