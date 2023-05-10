@@ -30,11 +30,11 @@ The user will need to run npm install to download dependencies. Initialize MySQL
 
 ## Credits
 
-[Dotenv](https://www.npmjs.com/package/dotenv)
-[Sequelize - Validation and Constraints](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
-[Sequelize](https://sequelize.org/)
-[W3 - SQL](https://www.w3schools.com/sql/sql_intro.asp)
-[MySQL](https://dev.mysql.com/)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Sequelize - Validation and Constraints](https://sequelize.org/docs/v6/core-concepts/validations-and-constraints/)
+- [Sequelize](https://sequelize.org/)
+- [W3 - SQL](https://www.w3schools.com/sql/sql_intro.asp)
+- [MySQL](https://dev.mysql.com/)
 
 ## License
 
