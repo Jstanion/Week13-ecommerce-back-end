@@ -26,7 +26,7 @@ The user will need to run npm install to download dependencies. Initialize MySQL
 
 ## Usage
 
-[E-Commerce Back End](https://drive.google.com/file/d/16fQs-gEC6v91pjX_jkhJUdYVCgyd-LRu/view?usp=share_link)
+[E-Commerce Back End Walkthrough Video](https://drive.google.com/file/d/16fQs-gEC6v91pjX_jkhJUdYVCgyd-LRu/view?usp=share_link)
 
 ## Credits
 
